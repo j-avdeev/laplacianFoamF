@@ -1,0 +1,4 @@
+laplacianFoamF
+==============
+
+laplacianFoam + FmeshAdaptation
