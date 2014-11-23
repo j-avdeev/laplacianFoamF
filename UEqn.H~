@@ -1,0 +1,65 @@
+    fvVectorMatrix UEqn
+    (
+        fvm::ddt(rho, U)
+      + fvm::div(rhoPhi, U)
+      + turbulence->divDevRhoReff(rho, U)
+    );
+
+    UEqn.relax();
+
+	List<scalar> nonDiag; // sums of non-diagonal elements
+
+	nonDiag.resize(U.size());
+	forAll(nonDiag, i)
+	{
+	    nonDiag[i] = 0.0;
+	}
+	
+	const lduAddressing& addr = UEqn.lduAddr();
+	const labelList& lowerAddr = addr.lowerAddr();
+	const labelList& upperAddr = addr.upperAddr();
+	
+	forAll(lowerAddr, i)
+	{
+// 	    A[lowerAddr[i]][upperAddr[i]] = pEqn.upper()[i];
+// 	    A[upperAddr[i]][lowerAddr[i]] = pEqn.lower()[i];
+	    nonDiag[lowerAddr[i]] += UEqn.upper()[i];
+	    nonDiag[upperAddr[i]] += UEqn.lower()[i];
+	}
+	
+	forAll(U.boundaryField(),I)
+	{
+	    const fvPatch &ptch=U.boundaryField()[I].patch();
+	    forAll(ptch,J)
+	    {
+		int w=ptch.faceCells()[J];
+		nonDiag[w]+=UEqn.internalCoeffs()[I][J];
+		Info << "nonDiag" << "[" << w << "]" << " = " << nonDiag[w]  << nl << endl;
+	    }
+	
+	}
+	
+	
+	forAll(UEqn.diag(),i)
+	    {
+	      F[i] = abs(UEqn.diag()[i])+abs(nonDiag[i]);
+	    }
+
+    
+    
+    if (pimple.momentumPredictor())
+    {
+        solve
+        (
+            UEqn
+         ==
+            fvc::reconstruct
+            (
+                (
+                    fvc::interpolate(interface.sigmaK())*fvc::snGrad(alpha1)
+                  - ghf*fvc::snGrad(rho)
+                  - fvc::snGrad(p_rgh)
+                ) * mesh.magSf()
+            )
+        );
+    }

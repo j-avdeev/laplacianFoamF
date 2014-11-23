@@ -35,3 +35,23 @@
     (
         transportProperties.lookup("DT")
     );
+
+    volScalarField F
+    (
+        IOobject
+        (
+            "F",
+            runTime.timeName(),
+            mesh,
+            IOobject::MUST_READ,
+            IOobject::AUTO_WRITE
+        ),
+        mesh
+    );
+
+
+
+//     fv::IOoptionList fvOptions(mesh);
+// 
+// 
+//     tmp<surfaceScalarField> tphiAlphaCorr0;
