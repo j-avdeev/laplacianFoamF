@@ -92,8 +92,8 @@ int main(int argc, char *argv[])
         // --- Pressure-velocity PIMPLE corrector loop
         while (simple.loop())
         {
-            if (moveMeshOuterCorrectors)
-            {
+//             if (moveMeshOuterCorrectors)
+//             {
                 scalar timeBeforeMeshUpdate = runTime.elapsedCpuTime();
 
                 mesh.update();
@@ -114,7 +114,7 @@ int main(int argc, char *argv[])
                 {
                     #include "meshCourantNo.H"
                 }
-            }
+//             }
 
 //             #include "alphaControls.H"
 

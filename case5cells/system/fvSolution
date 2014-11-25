@@ -34,7 +34,7 @@ SIMPLE
     // desired residual (iterations will not stop)
     residualControl
     {
-        T               1e-2;
+        T               1e-4;
     }
 }
 
