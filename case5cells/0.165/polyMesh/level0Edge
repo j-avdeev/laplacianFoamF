@@ -9,34 +9,15 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    location    "system";
-    object      fvSolution;
+    class       uniformDimensionedScalarField;
+    location    "0.165/polyMesh";
+    object      level0Edge;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
-{
-    T
-    {
-        solver          PCG;
-        preconditioner  DIC;
-        tolerance       1e-06;
-        relTol          0;
-    }
-}
+dimensions      [0 1 0 0 0 0 0];
+value           0.2;
 
-SIMPLE
-{
-    nNonOrthogonalCorrectors 2;
-    // Residuals here (one per variable)
-    // If one variable is not specified, zero is assumed as
-    // desired residual (iterations will not stop)
-    residualControl
-    {
-        T               1e-2;
-    }
-}
 
 
 // ************************************************************************* //

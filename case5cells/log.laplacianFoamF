@@ -1,0 +1,335 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.3.0-f5222ca19ce6
+Exec   : laplacianFoamF
+Date   : Nov 24 2014
+Time   : 23:42:32
+Host   : "debian-toshiba"
+PID    : 12292
+Case   : /home/jenek/laplacianFoamF/laplacianFoamF/case5cells
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Disallowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting dynamicFvMesh dynamicRefineFvMesh
+
+SIMPLE: convergence criteria
+    field T	 tolerance 0.01
+
+Reading field T
+
+Reading transportProperties
+
+Reading diffusivity DT
+
+
+Starting time loop
+
+Time = 0.005
+
+DICPCG:  Solving for T, Initial residual = 1, Final residual = 2.80952e-22, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 8.7798e-23, Final residual = 8.7798e-23, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 8.7798e-23, Final residual = 8.7798e-23, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.238095, Final residual = 9.39146e-28, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 1.61561e-22, Final residual = 1.61561e-22, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 1.61561e-22, Final residual = 1.61561e-22, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.135135, Final residual = 2.7946e-22, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 4.30836e-22, Final residual = 4.30836e-22, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 4.30836e-22, Final residual = 4.30836e-22, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0943391, Final residual = 4.5424e-32, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 3.23132e-22, Final residual = 3.23132e-22, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 3.23132e-22, Final residual = 3.23132e-22, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0724633, Final residual = 2.99713e-22, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 6.77652e-17, Final residual = 6.77652e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 6.77652e-17, Final residual = 6.77652e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.058823, Final residual = 4.86601e-22, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 5.64714e-17, Final residual = 5.64714e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 5.64714e-17, Final residual = 5.64714e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0495044, Final residual = 3.52869e-18, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 1.31201e-36, Final residual = 1.31201e-36, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 1.31201e-36, Final residual = 1.31201e-36, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0427345, Final residual = 3.53522e-22, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 4.23543e-17, Final residual = 4.23543e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 4.23543e-17, Final residual = 4.23543e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0375934, Final residual = 2.41391e-18, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 3.76485e-17, Final residual = 3.76485e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 3.76485e-17, Final residual = 3.76485e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0335565, Final residual = 1.29269e-31, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 2.40764e-31, Final residual = 2.40764e-31, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 2.40764e-31, Final residual = 2.40764e-31, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0303025, Final residual = 2.50689e-22, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 6.16086e-17, Final residual = 6.16086e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 6.16086e-17, Final residual = 6.16086e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0276238, Final residual = 2.2853e-22, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 1.72348e-21, Final residual = 1.72348e-21, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 1.72348e-21, Final residual = 1.72348e-21, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0253802, Final residual = 1.81105e-18, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 5.21304e-17, Final residual = 5.21304e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 5.21304e-17, Final residual = 5.21304e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0234736, Final residual = 1.6735e-18, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 4.84087e-17, Final residual = 4.84087e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 4.84087e-17, Final residual = 4.84087e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0218335, Final residual = 1.80628e-22, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 4.51805e-17, Final residual = 4.51805e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 4.51805e-17, Final residual = 4.51805e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0204076, Final residual = 3.37666e-22, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 4.23596e-17, Final residual = 4.23596e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 4.23596e-17, Final residual = 4.23596e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0191565, Final residual = 2.95209e-31, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 2.43321e-21, Final residual = 2.43321e-21, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 2.43321e-21, Final residual = 2.43321e-21, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.01805, Final residual = 2.57511e-18, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 4.59611e-21, Final residual = 4.59611e-21, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 4.59611e-21, Final residual = 4.59611e-21, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0170643, Final residual = 2.31306e-18, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 3.56721e-17, Final residual = 3.56721e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 3.56721e-17, Final residual = 3.56721e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0161807, Final residual = 2.67754e-22, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0, Final residual = 0, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.015384, Final residual = 1.09798e-18, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 1.96981e-21, Final residual = 1.96981e-21, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 1.96981e-21, Final residual = 1.96981e-21, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0146622, Final residual = 1.98776e-18, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 1.88029e-21, Final residual = 1.88029e-21, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 1.88029e-21, Final residual = 1.88029e-21, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.014005, Final residual = 2.82892e-26, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 5.89385e-17, Final residual = 5.89385e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 5.89385e-17, Final residual = 5.89385e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0134043, Final residual = 9.56746e-19, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 5.64831e-17, Final residual = 5.64831e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 5.64831e-17, Final residual = 5.64831e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0128529, Final residual = 9.18265e-19, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 2.01992e-25, Final residual = 2.01992e-25, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 2.01992e-25, Final residual = 2.01992e-25, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0123451, Final residual = 7.91919e-19, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 6.36445e-21, Final residual = 6.36445e-21, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 6.36445e-21, Final residual = 6.36445e-21, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0118759, Final residual = 1.6101e-18, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 1.87035e-25, Final residual = 1.87035e-25, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 1.87035e-25, Final residual = 1.87035e-25, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0114411, Final residual = 8.16891e-19, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 1.67965e-34, Final residual = 1.67965e-34, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 1.67965e-34, Final residual = 1.67965e-34, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.011037, Final residual = 7.8769e-19, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 4.67466e-17, Final residual = 4.67466e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 4.67466e-17, Final residual = 4.67466e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0106604, Final residual = 0, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 2.7581e-21, Final residual = 2.7581e-21, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 2.7581e-21, Final residual = 2.7581e-21, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.0103087, Final residual = 1.39785e-18, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0, Final residual = 0, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+DICPCG:  Solving for T, Initial residual = 0.00997947, Final residual = 2.01596e-26, No Iterations 1
+DICPCG:  Solving for T, Initial residual = 4.23625e-17, Final residual = 4.23625e-17, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 4.23625e-17, Final residual = 4.23625e-17, No Iterations 0
+nonDiag.size()=5
+
+U.size()=5
+
+F.size()=5
+
+
+SIMPLE solution converged in 0.165 iterations
+
+ExecutionTime = 0.04 s  ClockTime = 0 s
+
+End
+

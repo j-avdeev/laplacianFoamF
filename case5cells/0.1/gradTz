@@ -9,32 +9,56 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    location    "system";
-    object      fvSolution;
+    class       volScalarField;
+    location    "0.1";
+    object      gradTz;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
-{
-    T
-    {
-        solver          PCG;
-        preconditioner  DIC;
-        tolerance       1e-06;
-        relTol          0;
-    }
-}
+dimensions      [0 -1 0 1 0 0 0];
 
-SIMPLE
+internalField   nonuniform List<scalar> 5(-4.99953 -0.000474929 -2.37458e-08 -8.3109e-13 -2.28541e-17);
+
+boundaryField
 {
-    nNonOrthogonalCorrectors 2;
-    // Residuals here (one per variable)
-    // If one variable is not specified, zero is assumed as
-    // desired residual (iterations will not stop)
-    residualControl
+    walls
     {
-        T               1e-2;
+        type            calculated;
+        value           nonuniform List<scalar> 
+20
+(
+-4.99953
+-0.000474929
+-2.37458e-08
+-8.3109e-13
+-2.28541e-17
+-4.99953
+-0.000474929
+-2.37458e-08
+-8.3109e-13
+-2.28541e-17
+-4.99953
+-0.000474929
+-2.37458e-08
+-8.3109e-13
+-2.28541e-17
+-4.99953
+-0.000474929
+-2.37458e-08
+-8.3109e-13
+-2.28541e-17
+)
+;
+    }
+    inlet
+    {
+        type            calculated;
+        value           uniform -9.9981;
+    }
+    outlet
+    {
+        type            calculated;
+        value           uniform 0;
     }
 }
 

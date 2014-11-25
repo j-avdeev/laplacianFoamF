@@ -9,32 +9,30 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    location    "system";
-    object      fvSolution;
+    class       volScalarField;
+    location    "0.1";
+    object      T;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
-{
-    T
-    {
-        solver          PCG;
-        preconditioner  DIC;
-        tolerance       1e-06;
-        relTol          0;
-    }
-}
+dimensions      [0 0 0 1 0 0 0];
 
-SIMPLE
+internalField   nonuniform List<scalar> 5(0.000189972 9.49834e-09 3.32436e-13 9.14186e-18 2.10264e-22);
+
+boundaryField
 {
-    nNonOrthogonalCorrectors 2;
-    // Residuals here (one per variable)
-    // If one variable is not specified, zero is assumed as
-    // desired residual (iterations will not stop)
-    residualControl
+    walls
     {
-        T               1e-2;
+        type            zeroGradient;
+    }
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 1;
+    }
+    outlet
+    {
+        type            zeroGradient;
     }
 }
 

@@ -29,13 +29,6 @@ solvers
 SIMPLE
 {
     nNonOrthogonalCorrectors 2;
-    // Residuals here (one per variable)
-    // If one variable is not specified, zero is assumed as
-    // desired residual (iterations will not stop)
-    residualControl
-    {
-        T               1e-2;
-    }
 }
 
 

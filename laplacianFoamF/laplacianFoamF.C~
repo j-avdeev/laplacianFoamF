@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 
     while (runTime.run())
     {
-//         #include "readControls.H"
+        #include "readControls.H"
 //         #include "alphaCourantNo.H"
 //         #include "CourantNo.H"
 
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
                 scalar timeBeforeMeshUpdate = runTime.elapsedCpuTime();
 
                 mesh.update();
-
+		Info << "mesh updated" << endl;
                 if (mesh.changing())
                 {
                     Info<< "Execution time for mesh.update() = "

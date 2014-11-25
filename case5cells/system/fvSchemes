@@ -1,8 +1,8 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  1.7.1                                 |
-|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
 FoamFile
@@ -17,48 +17,40 @@ FoamFile
 
 ddtSchemes
 {
-    default       Euler;
-    ddt(psi)	  Euler;
-//     ddt(T)	  Euler;
-}
-
-d2dt2Schemes
-{
-//     d2dt2(psi)	  Euler;
+    default         Euler;
 }
 
 gradSchemes
 {
-//     default         Gauss linear;
+    default         Gauss linear;
+    grad(T)         Gauss linear;
 }
 
 divSchemes
 {
     default         none;
-    div(phi,psi) Gauss linear;// Gauss SFCD;// Gauss upwind;
 }
 
 laplacianSchemes
 {
     default         none;
-//     laplacian(c0,psi) Gauss linear corrected;
-//     laplacian(DT,T)   Gauss linear corrected;
+    laplacian(DT,T) Gauss linear corrected;
 }
 
 interpolationSchemes
 {
-//     default         linear;
+    default         linear;
 }
 
 snGradSchemes
 {
-//     default         corrected;
+    default         corrected;
 }
 
 fluxRequired
 {
     default         no;
-    p               ;
+    T               ;
 }
 
 

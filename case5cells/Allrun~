@@ -1,0 +1,18 @@
+# #!/bin/sh
+# cd ${0%/*} || exit 1    # run from this directory
+# 
+# # Source tutorial run functions
+# . $WM_PROJECT_DIR/bin/tools/RunFunctions
+# 
+# # Get application name
+# application=`getApplication`
+
+blockMesh
+cp -r 0.org/* 0 > /dev/null 2>&1
+
+laplacianFoamF
+# runApplication foamToEnsight
+# runApplication foamToEnsightParts
+# runApplication foamToVTK
+touch 5cells.foam
+# ----------------------------------------------------------------- end-of-file
