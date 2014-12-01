@@ -717,8 +717,6 @@ laplacianFoamF.dep: $(WM_PROJECT_DIR)/src/dynamicFvMesh/lnInclude/createDynamicF
 laplacianFoamF.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/initContinuityErrs.H
 laplacianFoamF.dep: ../createFields.H
 laplacianFoamF.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/readTimeControls.H
-laplacianFoamF.dep: readControls.H
-laplacianFoamF.dep: $(WM_PROJECT_DIR)/src/dynamicFvMesh/lnInclude/meshCourantNo.H
 laplacianFoamF.dep: write.H
 $(OBJECTS_DIR)/laplacianFoamF.o: $(EXE_DEP)
 $(OBJECTS_DIR)/laplacianFoamF.o:

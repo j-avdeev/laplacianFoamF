@@ -22,20 +22,25 @@ boundaryField
 {
     walls
     {
-        type            zeroGradient;
+	type		fixedGradient;
+ 	gradient 	uniform 10;
     }
 
     inlet
     {
         type            fixedValue;
-        value           uniform 10;
+        value           uniform 1;
+// 	type		fixedGradient;
+//  	gradient 	uniform 10;
     }
 
     outlet
     {
 //         type            fixedValue;
 //         value           uniform 20;
-        type            zeroGradient;
+//         type            zeroGradient;
+	type		fixedGradient;
+ 	gradient 	uniform 10;//(20 0 0);
     }
 }
 
