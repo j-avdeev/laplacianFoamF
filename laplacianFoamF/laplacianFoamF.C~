@@ -92,22 +92,10 @@ int main(int argc, char *argv[])
         // --- Pressure-velocity PIMPLE corrector loop
         while (simple.loop())
         {
+	  Info<< "Time = " << runTime.timeName() << nl << endl;
 //             if (moveMeshOuterCorrectors)
 //             {
-                scalar timeBeforeMeshUpdate = runTime.elapsedCpuTime();
-
-                mesh.update();
-		
-		Info << "mesh updated" << endl;
-                if (mesh.changing())
-                {
-                    Info<< "Execution time for mesh.update() = "
-                        << runTime.elapsedCpuTime() - timeBeforeMeshUpdate
-                        << " s" << endl;
-
-//                     gh = g & mesh.C();
-//                     ghf = g & mesh.Cf();
-                }
+// mesh UPDATE WAS HERE
 
 
 //                 if (mesh.changing() && checkMeshCourantNo)
@@ -195,8 +183,25 @@ int main(int argc, char *argv[])
 
 		F = normalisedF;
 		Info << "F = normalisedF;" << nl << endl;
-		normalisedF.clear();        
+// 		normalisedF.clear();        
 		#include "write.H"
+
+		
+		scalar timeBeforeMeshUpdate = runTime.elapsedCpuTime();
+
+                mesh.update();
+		
+		Info << "mesh updated" << endl;
+                if (mesh.changing())
+                {
+                    Info<< "Execution time for mesh.update() = "
+                        << runTime.elapsedCpuTime() - timeBeforeMeshUpdate
+                        << " s" << endl;
+
+//                     gh = g & mesh.C();
+//                     ghf = g & mesh.Cf();
+                }
+		
         }
 
         runTime.write();

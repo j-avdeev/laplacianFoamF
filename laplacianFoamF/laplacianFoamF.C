@@ -85,13 +85,12 @@ int main(int argc, char *argv[])
 
 //         #include "setDeltaT.H"
 
-        runTime++;
-
-        Info<< "Time = " << runTime.timeName() << nl << endl;
+//         runTime++;
 
         // --- Pressure-velocity PIMPLE corrector loop
         while (simple.loop())
         {
+	  Info<< "Time = " << runTime.timeName() << nl << endl;
 //             if (moveMeshOuterCorrectors)
 //             {
 // mesh UPDATE WAS HERE

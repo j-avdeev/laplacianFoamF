@@ -10,7 +10,7 @@
 blockMesh
 cp -r 0.org/* 0 > /dev/null 2>&1
 
-laplacianFoamF
+laplacianFoamF > log.laplacianFoamF
 # runApplication foamToEnsight
 # runApplication foamToEnsightParts
 # runApplication foamToVTK

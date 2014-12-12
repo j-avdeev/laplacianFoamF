@@ -1,0 +1,8 @@
+#!/usr/bin/gnuplot
+set logscale y
+set title "Residuals"
+set ylabel 'Residual'
+set xlabel 'Time'
+set logscale y
+plot "/home/jenek/laplacianFoamF/laplacianFoamF/case5cells/case3/logs/TFinalRes_0" t "TFinalRes_0" with lines
+reread
