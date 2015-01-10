@@ -155,9 +155,10 @@ int main(int argc, char *argv[])
 	
 		forAll(TEqn.diag(),i)
 		{
-		    F[i] = TEqn.diag()[i];
+		    F[i] = TEqn.diag()[i]+nonDiag[i];  
 		}
-	      
+	        Info << "U.size()=" << T.size() << nl << endl;
+		
 		Info << "nonDiag.size()=" << nonDiag.size() << nl << endl;
 		Info << "U.size()=" << T.size() << nl << endl;
 		Info << "F.size()=" << F.size() << nl << endl;
@@ -180,8 +181,7 @@ int main(int argc, char *argv[])
 		normalisedF.writeOpt() = IOobject::AUTO_WRITE;
 
 		F = normalisedF;
-		Info << "F = normalisedF;" << nl << endl;
-// 		normalisedF.clear();        
+		Info << "F = normalisedF;" << nl << endl;      
 		#include "write.H"
 
 		
@@ -199,7 +199,8 @@ int main(int argc, char *argv[])
 //                     gh = g & mesh.C();
 //                     ghf = g & mesh.Cf();
                 }
-		
+                
+		normalisedF.clear(); 		
         }
 
         runTime.write();
