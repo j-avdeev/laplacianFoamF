@@ -117,7 +117,7 @@ int main(int argc, char *argv[])
 		(
 		  fvm::ddt(T) - fvm::laplacian(DT, T)
 		);
-		
+
 		while (simple.correctNonOrthogonal())
 		{
 		    TEqn.solve();
@@ -183,6 +183,35 @@ int main(int argc, char *argv[])
 		F = normalisedF;
 		Info << "F = normalisedF;" << nl << endl;      
 		#include "write.H"
+
+		surfaceVectorField gradT = fvc::interpolate(fvc::grad(T));
+		gradT.writeOpt() = IOobject::AUTO_WRITE;
+		
+		surfaceScalarField sumGradT = gradT.component(vector::X)+gradT.component(vector::Y)+gradT.component(vector::Z);
+// 		volScalarField sumGradT2
+// 		(
+// 		    "sumGradT2",
+// 		    gradT.component(vector::Y)
+// 		);
+// 		sumGradT2.writeOpt() = IOobject::AUTO_WRITE;
+//         volScalarField gradTy2
+//         (
+//             IOobject
+//             (
+//                 "gradTy2",
+//                 runTime.timeName(),
+//                 mesh,
+//                 IOobject::NO_READ,
+//                 IOobject::AUTO_WRITE
+//             ),
+//             gradT.component(vector::Y)
+//         );
+/*		volScalarField sumGradT
+		(
+		    "sumGradT",
+		    gradT.component(vector::X)+gradT.component(vector::Y)+gradT.component(vector::Z)
+		);
+		sumGradT.writeOpt() = IOobject::AUTO_WRITE;*/		
 
 		
 		scalar timeBeforeMeshUpdate = runTime.elapsedCpuTime();
