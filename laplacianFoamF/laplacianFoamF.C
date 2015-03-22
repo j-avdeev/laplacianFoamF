@@ -149,12 +149,22 @@ int main(int argc, char *argv[])
 		    forAll(ptch,J)
 		    {
 			int w=ptch.faceCells()[J];
+				
 			nonDiag[w]+=TEqn.internalCoeffs()[I][J];
 		    }
 		}
 	
 		forAll(TEqn.diag(),i)
 		{
+		    
+		    if (TEqn.diag()[i] > nonDiag[i])
+		    {
+		      Info << "TEqn.diag()[i] bigger" << T.size() << nl << endl;
+		    }
+		    else
+		    {
+		      Info << "nonDiag[i] bigger" << T.size() << nl << endl;
+		    }
 		    F[i] = TEqn.diag()[i]+nonDiag[i];  
 		}
 	        Info << "U.size()=" << T.size() << nl << endl;
@@ -188,7 +198,7 @@ int main(int argc, char *argv[])
 		gradT.writeOpt() = IOobject::AUTO_WRITE;
 		
 		surfaceScalarField sumGradT = gradT.component(vector::X)+gradT.component(vector::Y)+gradT.component(vector::Z);
-// 		volScalarField sumGradT2
+		// 		volScalarField sumGradT2
 // 		(
 // 		    "sumGradT2",
 // 		    gradT.component(vector::Y)
